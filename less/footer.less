@@ -1,8 +1,7 @@
 footer {
   nav {
-    font-family: Open Sans; //font mixin
-    font-style: normal;
-    font-weight: normal;
+    border-top: 1px solid white;
+
     font-size: 12px;
     line-height: 16px;
     display: flex; //flex align
@@ -11,14 +10,19 @@ footer {
     justify-content: flex-start;
     padding-bottom: 1%;
     padding-top: 1%;
+    background-color: #111125;
+
     a {
+      font-family: Open Sans; //font mixin
+      font-style: normal;
+      font-weight: normal;
       cursor: pointer;
       font-size: 15px;
       margin-right: 6%;
       margin-left: 6%;
-      color: black;
+      color: white;
       &:hover {
-        border-bottom: 2px solid purple;
+        border-bottom: 2px solid blue;
       }
     }
   }

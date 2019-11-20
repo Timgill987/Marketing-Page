@@ -1,3 +1,50 @@
+.font-opensans {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-align {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.flex-space-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-row-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.mobile-button-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
 html,
 body,
 div,
@@ -176,7 +223,7 @@ img {
 }
 body {
   display: block;
-  margin: 50px 8px;
+  margin: 0px 8px;
   z-index: 0;
 }
 a {
@@ -184,9 +231,7 @@ a {
   color: white;
 }
 footer nav {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
+  border-top: 1px solid white;
   font-size: 12px;
   line-height: 16px;
   display: flex;
@@ -195,58 +240,64 @@ footer nav {
   justify-content: flex-start;
   padding-bottom: 1%;
   padding-top: 1%;
+  background-color: #111125;
 }
 footer nav a {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
   cursor: pointer;
   font-size: 15px;
   margin-right: 6%;
   margin-left: 6%;
-  color: black;
+  color: white;
 }
 footer nav a:hover {
-  border-bottom: 2px solid purple;
+  border-bottom: 2px solid blue;
 }
-.button {
+.button-div {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-.sign-up {
-  width: 448px;
-  height: 56px;
+@media (max-width: 500px) {
+  .button-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
+button {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
+  margin-right: 2%;
   font-size: 16px;
   line-height: 22px;
-  background: #111125;
-  color: white;
+  background: white;
+  color: black;
   border-radius: 4px;
+  border-color: 5px solid black;
   cursor: pointer;
 }
-.sign-up:hover {
-  background-color: #ffffff;
-  color: black;
-}
-.sign-in {
-  display: flex;
-  justify-content: center;
-  padding-top: 1.1%;
-}
-.sign-in a {
-  text-decoration: underline;
+button:hover {
+  background-color: black;
+  color: white;
 }
 header nav {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding-bottom: 1%;
-  padding-top: 1%;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+  background-color: #111125;
 }
 header nav a {
   cursor: pointer;
@@ -256,7 +307,13 @@ header nav a {
   color: black;
 }
 header nav a:hover {
-  border-bottom: 2px solid purple;
+  border-bottom: 2px solid #0500ff;
+}
+header nav a p {
+  font-size: px;
+  line-height: 33px;
+  display: flex;
+  text-align: center;
 }
 .main-content {
   background-image: url("../images/beautiful-blue-sunset-1.jpg");
@@ -264,13 +321,27 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-content: flex-end;
   width: 100%;
-  height: 85rem;
+  height: 900px;
 }
-h1 {
+.main-content h1 {
   font-size: 177px;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .main-content h1 {
+    font-size: 50px;
+  }
+}
+.main-content p {
+  text-align: center;
+  font-size: 40px;
+}
+@media (max-width: 500px) {
+  .main-content p {
+    font-size: 25px;
+  }
 }
 section {
   background-color: #111125;
@@ -283,6 +354,12 @@ section {
 .section-div .Row-of-sections {
   display: flex;
   flex-direction: row;
+}
+@media (max-width: 500px) {
+  .section-div .Row-of-sections {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .section-div .Row-of-sections div {
   width: 100%;
@@ -303,7 +380,7 @@ section {
   height: 65px;
   font-size: 40px;
   line-height: 65px;
-  border-bottom: 3px solid purple;
+  border-bottom: 3px solid #0500ff;
 }
 .section-div .Row-of-sections div p {
   font-size: 20px;
